@@ -118,12 +118,12 @@ fun EclipseLabsApp(theme: MutableState<Theme>, language: MutableState<String>) {
 
 @Composable
 fun KernelStatus() {
-    val kernelVersion = System.getProperty("os.version") ?: "unknown"
+    val kernelVersion = System.getProperty("os.version") ?: "universe"
 
     val (text, color, textColor) = when {
-        kernelVersion.contains("eclipse", ignoreCase = true) -> Triple("e*", Color(0xFF42A5F5), Color.White)
+        kernelVersion.contains("helium", ignoreCase = true) -> Triple("e*", Color(0xFF42A5F5), Color.White)
         kernelVersion.contains("experience", ignoreCase = true) -> Triple("exp", Color(0xFFFFCA28), Color.Black)
-        else -> Triple("unknown", Color.DarkGray, Color.White)
+        else -> Triple("universe", Color.DarkGray, Color.White)
     }
 
     Card(modifier = Modifier.fillMaxWidth(), elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)) {
