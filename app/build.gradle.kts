@@ -14,8 +14,8 @@ android {
         applicationId = "com.eclipseLaboratory.eclipseLabs"
         minSdk = 26
         targetSdk = 36
-        versionCode = 2
-        versionName = "eclipse-rc2"
+        versionCode = 3
+        versionName = "Release Candidate III (3)"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
