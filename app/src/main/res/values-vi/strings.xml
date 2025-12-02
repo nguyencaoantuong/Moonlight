@@ -18,4 +18,7 @@
     <string name="theme_light">Sáng</string>
     <string name="theme_dark">Tối</string>
     <string name="theme_system">Theo hệ thống</string>
+    <string name="kernelsu_status">KernelSU</string>
+    <string name="kernelsu_yes">Có</string>
+    <string name="kernelsu_no">Không có</string>
 </resources>

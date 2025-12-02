@@ -5,17 +5,17 @@ plugins {
 }
 
 android {
-    namespace = "com.eclipseOrganization.eclipseLabs"
+    namespace = "com.eclipseLaboratory.eclipseLabs"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.eclipseOrganization.eclipseLabs"
+        applicationId = "com.eclipseLaboratory.eclipseLabs"
         minSdk = 26
         targetSdk = 36
-        versionCode = 1
-        versionName = "Nemesis"
+        versionCode = 2
+        versionName = "eclipse-rc2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

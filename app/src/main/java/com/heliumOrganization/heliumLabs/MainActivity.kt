@@ -1,4 +1,4 @@
-package com.eclipseOrganization.eclipseLabs
+package com.eclipseLaboratory.eclipseLabs
 
 import android.content.Context
 import android.content.Context.TELEPHONY_SERVICE
@@ -58,8 +58,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.eclipseOrganization.eclipseLabs.ui.theme.EclipseLabsTheme
-import com.eclipseOrganization.eclipseLabs.ui.theme.Theme
+import com.eclipseLaboratory.eclipseLabs.ui.theme.EclipseLabsTheme
+import com.eclipseLaboratory.eclipseLabs.ui.theme.Theme
+import java.io.File
 import java.util.Locale
 
 class MainActivity : ComponentActivity() {
@@ -147,11 +148,17 @@ fun KernelStatus() {
     }
 }
 
+private fun isKernelSuInstalled(): Boolean {
+    return File("/data/adb/ksud").exists()
+}
+
 @Composable
 fun HomeScreen(modifier: Modifier = Modifier) {
     val context = LocalContext.current
     val telephonyManager = context.getSystemService(TELEPHONY_SERVICE) as TelephonyManager
     val simProvider = telephonyManager.simOperatorName
+    val isKsInstalled = isKernelSuInstalled()
+    val kernelSuStatus = if (isKsInstalled) stringResource(id = R.string.kernelsu_yes) else stringResource(id = R.string.kernelsu_no)
 
     Column(
         modifier = modifier
@@ -183,6 +190,7 @@ fun HomeScreen(modifier: Modifier = Modifier) {
                 DeviceInfoRow(stringResource(id = R.string.build_number), Build.DISPLAY)
                 DeviceInfoRow(stringResource(id = R.string.security_patch), Build.VERSION.SECURITY_PATCH)
                 DeviceInfoRow(stringResource(id = R.string.kernel_version), System.getProperty("os.version"))
+                DeviceInfoRow(stringResource(id = R.string.kernelsu_status), kernelSuStatus)
                 DeviceInfoRow(stringResource(id = R.string.esim_provider), simProvider)
                 DeviceInfoRow(stringResource(id = R.string.fingerprint), Build.FINGERPRINT)
             }
