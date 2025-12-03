@@ -148,10 +148,6 @@ fun KernelStatus() {
     }
 }
 
-private fun isKernelSuInstalled(): Boolean {
-    return File("/data/adb/ksud").exists()
-}
-
 @Composable
 fun HomeScreen(modifier: Modifier = Modifier) {
     val context = LocalContext.current
