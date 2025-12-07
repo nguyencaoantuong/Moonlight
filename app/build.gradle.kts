@@ -5,17 +5,17 @@ plugins {
 }
 
 android {
-    namespace = "com.heliumOrganization.heliumLabs"
+    namespace = "git.nguyencaoantuong.Moonlight"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.heliumOrganization.heliumLabs"
+        applicationId = "git.nguyencaoantuong.Moonlight"
         minSdk = 26
         targetSdk = 36
-        versionCode = 3
-        versionName = "Release Candidate III (3)"
+        versionCode = 4
+        versionName = "Release I (1)"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
