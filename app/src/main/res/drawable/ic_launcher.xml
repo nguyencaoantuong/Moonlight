@@ -11,11 +11,10 @@
                           a48,48 0 1,0 96,0
                           a48,48 0 1,0 -96,0"/>
                           
-    <path
-        android:fillColor="#659af0"
-        android:pathData="M54,14
-                    L94,54
-                    L54,94
-                    L14,54
-                    Z"/>
+<path
+    android:fillColor="#659af0"
+    android:pathData="M78,28
+                      A40,40 0 1,0 78,80
+                      A30,30 0 1,1 78,28
+                      Z"/>
 </vector>
